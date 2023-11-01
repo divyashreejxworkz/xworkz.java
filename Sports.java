@@ -6,9 +6,10 @@ import lombok.Setter;
 @AllArgsConstructor
 @Setter
 @Getter
-public class Company {
+public class Sports{
 	private String name;
-	private int totalEmployees;
-	private int totalDepartment;
-	private String founders;
-	}
+	private int totalPlayers;
+	private String place;
+	private String newSports;
+
+}

@@ -1,46 +1,21 @@
-package com.xworkz.darara1.driver;
+package com.xworkz.shopping.driver;
 
-import com.xworkz.darara1.things.Bank;
-import com.xworkz.darara1.things.FD;
-import com.xworkz.darara1.things.Online;
-import com.xworkz.darara1.things.Payment;
-import com.xworkz.darara1.things.RD;
-import com.xworkz.darara1.things.Account;
+import com.xworkz.shopping.things.Accounts;
 
 public class BankRunner {
-	public static void main(String args[])
-	{
-		Bank b=new Bank();
-		b.setName("SBI");
-		b.setAddress("Dasarahalli");
-		b.setPlace("Banglore");
-		RD r=new RD();
-		r.setPeriod("1Month");
-		r.setDate("11/12/23");
-		r.setBank("SBI");
-		FD f=new FD();
-		f.setAmount(15000);
-		f.setBank("SBI");
-		f.setPerson("Divyashree");
-		Payment p=new Payment();
-		p.setPersonName("Deepak");
-		p.setOffline(false);
-		p.setAmount(4500);
-		Online o=new Online();
-		o.setAmount(3000);
-		o.setAddress("Hassan");
-		o.setBank("SBI");
-		p.setOnline(o);
-		Account a=new Account();
-		a.setBankAddress("sadashiva nagar");
-		a.setAccounNumber(124567777l);
-		a.setIfcCode("IFC12345455");
-		a.setRd(r);
-		a.setFd(f);
-		b.setPayment(p);
-		b.setAccount(a);
-		System.out.println(b.getPayment().getOnline().getAmount());
-		System.out.println(b.getAccount().getRd().getPeriod());
-		System.out.println(b.getAccount().getFd().getAmount());
+	public static void main(String[] args) {
+		Accounts a=new Accounts();
+		a.setBankName("SBI");
+		a.setPersonName("Divyashree");
+		a.setAccountNumber(23456777l);
+		a.setPlace("Dasarahalli");
+		String bankName=a.getBankName();
+		String personName=a.getPersonName();
+		long accountNumber=a.getAccountNumber();
+		String place=a.getPlace();
+		System.out.println("bank name:"+a.getBankName());
+		System.out.println("Person name:"+a.getPersonName());
+		System.out.println("Account Number:"+a.getAccountNumber());
+		System.out.println("place:"+a.getPlace());
+				}
 	}
-}

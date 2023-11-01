@@ -1,33 +1,33 @@
-package com.xworkz.darara1.things;
+package com.xworkz.shopping.things;
 
 public class Bank {
-	private String name;
-	private String address;
+	private String bankName;
+	private String personName;
+	private long accountNumber;
 	private String place;
-	private Payment payment;
-	private Account account;
-	public Bank() {
-		System.out.println("no-arguments");
-	}
-	public Bank(String name, String address, String place, Payment payment, Account account) {
-		System.out.println("All-arguments");
-		this.name = name;
-		this.address = address;
+	public Bank(String bankName, String personName, long accountNumber, String place) {
+		this.bankName = bankName;
+		this.personName = personName;
+		this.accountNumber = accountNumber;
 		this.place = place;
-		this.payment = payment;
-		this.account = account;
 	}
-	public String getName() {
-		return name;
+	public String getBankName() {
+		return bankName;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setBankName(String bankName) {
+		this.bankName = bankName;
 	}
-	public String getAddress() {
-		return address;
+	public String getPersonName() {
+		return personName;
 	}
-	public void setAddress(String address) {
-		this.address = address;
+	public void setPersonName(String personName) {
+		this.personName = personName;
+	}
+	public long getAccountNumber() {
+		return accountNumber;
+	}
+	public void setAccountNumber(long accountNumber) {
+		this.accountNumber = accountNumber;
 	}
 	public String getPlace() {
 		return place;
@@ -35,19 +35,6 @@ public class Bank {
 	public void setPlace(String place) {
 		this.place = place;
 	}
-	public Payment getPayment() {
-		return payment;
-	}
-	public void setPayment(Payment payment) {
-		this.payment = payment;
-	}
-	public Account getAccount() {
-		return account;
-	}
-	public void setAccount(Account account) {
-		this.account = account;
-	}
-	
 	
 
 }
