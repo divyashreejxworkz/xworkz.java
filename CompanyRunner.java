@@ -1,22 +1,23 @@
-package com.xworkz.shopping.driver;
+package com.xworkz.company.runner;
 
-import com.xworkz.shopping.things.Employee;
+import com.xworkz.company.abstractImplementaion.CompanyImplementation;
+import com.xworkz.company.abstracts.Company;
+import com.xworkz.companyInfo.CompanyInfo;
 
 public class CompanyRunner {
 	public static void main(String[] args) {
-		Employee e=new Employee();
-		e.setName("Google");
-		e.setTotalEmployees(1000);
-		e.setTotalDepartment(25);
-		e.setFounders("Larry Page Sergey Brin");
-		String name =e.getName();
-		int totalEmployees=e.getTotalEmployees();
-		int totalDepartment=e.getTotalDepartment();
-		String founders=e.getFounders();
-		System.out.println("name:"+e.getName());
-		System.out.println("Total Employees:"+e.getTotalEmployees());
-		System.out.println("Total Department:"+e.getTotalDepartment());
-		System.out.println("Founder:"+e.getFounders());
+		Company c=new CompanyImplementation();
+		CompanyInfo i = new CompanyInfo();
+	i.setPlace("Google");
+	i.setPlace("Banglore");
+	i.setNoOfEmployees(500);
+	String place=i.getPlace();
+	String name=i.getName();
+	int noOfEmployees=i.getNoOfEmployees();
+	boolean save=c.onSave(i);
+	System.out.println("save:"+save);
 	}
+	
+	
 
 }

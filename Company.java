@@ -1,14 +1,8 @@
-package com.xworkz.shopping.things;
+package com.xworkz.company.abstracts;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
-@AllArgsConstructor
-@Setter
-@Getter
-public class Company {
-	private String name;
-	private int totalEmployees;
-	private int totalDepartment;
-	private String founders;
-	}
+import com.xworkz.companyInfo.CompanyInfo;
+
+public abstract class Company {
+	public abstract boolean onSave(CompanyInfo companyInfo);
+
+}
