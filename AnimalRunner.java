@@ -1,16 +1,19 @@
-package com.xworkz.shopping.driver;
+package com.xworkz.animal.runner;
 
-import com.xworkz.shopping.things.Dog;
+import com.xworkz.animal.dto.AnimalDto;
+import com.xworkz.animal.interfaces.AnimalEat;
+import com.xworkz.animal.interfaces.AnimalTravel;
 
-public class AnimalRunner {
+public interface AnimalRunner {
 	public static void main(String[] args) {
-	Dog d=new Dog();
-	d.setName("Loosy");
-	d.setPetPrice(5000);
-	String name=d.getName();
-	System.out.println("name:"+d.getName());
-	int petPrice=d.getPetPrice();
-	System.out.println("pet Price:"+d.getPetPrice());
+		AnimalDto a=new AnimalDto();
+		a.animalEatingFoodDetails("Cow");
+		a.animalTravelingDetails();
+		a.travelling();
+		a.eating();
+		//we can access static method using the interfaceName
+		AnimalEat.eatFood("7Years","Banana");
+		AnimalTravel.travel("Banavaara");
+		
 	}
-
 }
